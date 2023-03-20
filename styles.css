@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1c1c1c;
+  --container-color: #1f2937;
+  --main-blue-color: #075985;
+  --main-font-color: #ecfdf5;
+  --pass-box-color: #273549;
+}
+
+.light {
+  --container-color: #ecfdf5;
+  --main-font-color: #1f2937;
+}
+
+body {
+  margin: 0;
+  background-color: var(--main-color);
+  color: var(--main-font-color);
+  font-family: "Karla", sans-serif;
+}
+
+#container {
+  position: relative;
+  margin: 4.5em auto 0;
+  width: 550px;
+  background-color: var(--container-color);
+  padding: 5em 3em;
+  border-radius: 6px;
+  border: 5px solid #ecfdf5;
+}
+
+h1 {
+  color: var(--main-font-color);
+  font-size: 2.5rem;
+  margin-top: 0px;
+  margin-bottom: .5em;
+}
+
+span {
+  display: block;
+  color: var(--main-blue-color);
+}
+
+#smallText {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--main-font-color);
+}
+
+#generateBtn {
+  display: block;
+  padding: 1em 2em;
+  background-color: var(--main-blue-color);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px rgba(12, 12, 12, 0.2);
+  font-size: 1rem;
+  color: #ecfdf5;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+#generateBtn:hover {
+  background-color: #0369A1;
+}
+
+#lengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#lengthContainer > input {
+  width: 166px;
+}
+
+#passwordLengthLabel {
+  color: var(--main-font-color);
+}
+
+#passwordLength:hover {
+  cursor: pointer;
+}
+
+#checkbox-container {
+  margin-top: 1em;
+  color: var(--main-font-color);
+  display: flex;
+}
+
+#checkbox-container > label {
+  margin-right: auto;
+}
+
+hr {
+  border: 1px solid #2f3e53;
+  margin: 2em 0 2.5em;
+}
+
+.pass_container {
+  width: auto;
+  display: flex;
+  gap: 1.5em;
+}
+
+.passBox {
+  width: 211px;
+  height: 40px;
+  background: var(--pass-box-color);
+  border-radius: 6px;
+  border: none;
+  color: var(--main-blue-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.passBox > p {
+  margin: 0;
+  color: var(--main-blue-color);
+  cursor: pointer;
+}
+
+.passBox > p:hover {
+  color: #0284C7;
+}
+
+#passwordCopiedAlert {
+  margin: .6em 0 0 0;
+  text-align: center;
+  color: var(--main-blue-color);
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#toggleLight {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  padding: 0 0 3px 0;
+  background-color: var(--main-blue-color);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#toggleLight:hover {
+  background-color: #0369A1;
+}
+
+@media (max-width: 550px) {
+  body{
+    text-align: center;
+  }
+  #container {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 1.5em 1.5em;
+  }
+
+  h1 {
+    margin-bottom: 1em;
+  }
+
+  #smallText {
+    margin-bottom: 1.5em;
+  }
+
+  #generateBtn {
+    margin-bottom: 2em;
+  }
+  #lengthContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+  }
+
+  #passwordLengthLabel {
+    margin-bottom: .5em;
+  }
+
+  #checkbox-container {
+    margin-bottom: 2em;
+  }
+
+  hr {
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 2em;
+  }
+
+  .pass_container {
+    flex-direction: column;
+  }
+
+  #checkbox-container {
+    gap: .5em;
+  }
+}
